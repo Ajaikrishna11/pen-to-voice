@@ -2,20 +2,20 @@
 
 Welcome to the handwritten text recognition (HTR) pipeline, where you can detect and read words in scanned pages with ease.
 
-## Features:
-# Word Detection:
+# Features:
+## Word Detection:
     The pipeline employs a robust word detection algorithm that can accurately identify individual words in scanned pages, regardless of their orientation, size, or style of handwriting.
 
-# Word Reading: 
+## Word Reading: 
     Once the words are detected, a sophisticated optical character recognition (OCR) engine is employed to convert the handwritten text into machine-readable format. This allows for seamless access, indexing, and further analysis of the textual content.
 
-# Configurable Settings: 
+## Configurable Settings: 
     The pipeline provides flexibility through configurable settings. Users can fine-tune parameters such as the minimum word height, line clustering thresholds, and more, to adapt the system to their specific requirements.
 
-# Demo Application: T
+## Demo Application: T
     he included demo application showcases the pipeline's capabilities by processing sample images and providing visual representations of the detected words. This allows users to quickly grasp the potential of the system.
 
-## Overview
+# Overview
 
 This pipeline utilizes advanced algorithms to perform two main operations:
 
