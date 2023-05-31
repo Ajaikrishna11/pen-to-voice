@@ -8,12 +8,6 @@ operations:
 
 ![example](./doc/example.png)
 
-The pipeline combines these two models:
-
-* [Scale space based word detector](https://github.com/githubharald/WordDetector)
-* [CRNN based text reader](https://github.com/githubharald/SimpleHTR)
-
-**Don't expect too much as these are both very rudimentary models.**
 
 ## Installation
 
