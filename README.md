@@ -3,17 +3,13 @@
 Welcome to the handwritten text recognition (HTR) pipeline, where you can detect and read words in scanned pages with ease.
 
 # Features:
-## Word Detection:
-    The pipeline employs a robust word detection algorithm that can accurately identify individual words in scanned pages, regardless of their orientation, size, or style of handwriting.
+**Word Detection:** The pipeline employs a robust word detection algorithm that can accurately identify individual words in scanned pages, regardless of their orientation, size, or style of handwriting.
 
-## Word Reading: 
-    Once the words are detected, a sophisticated optical character recognition (OCR) engine is employed to convert the handwritten text into machine-readable format. This allows for seamless access, indexing, and further analysis of the textual content.
+**Word Reading:** Once the words are detected, a sophisticated optical character recognition (OCR) engine is employed to convert the handwritten text into machine-readable format. This allows for seamless access, indexing, and further analysis of the textual content.
 
-## Configurable Settings: 
-    The pipeline provides flexibility through configurable settings. Users can fine-tune parameters such as the minimum word height, line clustering thresholds, and more, to adapt the system to their specific requirements.
+**Configurable Settings:** The pipeline provides flexibility through configurable settings. Users can fine-tune parameters such as the minimum word height, line clustering thresholds, and more, to adapt the system to their specific requirements.
 
-## Demo Application: T
-    he included demo application showcases the pipeline's capabilities by processing sample images and providing visual representations of the detected words. This allows users to quickly grasp the potential of the system.
+**Demo Application:** The included demo application showcases the pipeline's capabilities by processing sample images and providing visual representations of the detected words. This allows users to quickly grasp the potential of the system.
 
 # Overview
 
@@ -32,9 +28,9 @@ To get started, follow these simple installation steps:
 1. Navigate to the root directory of the repository.
 2. Execute the command `pip install .` to install the necessary dependencies.
 
-## Usage
+# Usage
 
-### Run the Demo
+## 1.Run the Demo
 
 To get a glimpse of the pipeline's capabilities, run the provided demo:
 
@@ -43,10 +39,10 @@ To get a glimpse of the pipeline's capabilities, run the provided demo:
 3. Run the command `python demo.py`.
 4. Sit back and marvel at the output, which should resemble the plot shown above.
 
-### Use the Python Package
+## 2.Use the Python Package
 
-##Integrate the Pipeline
-# Integrating the HTR pipeline into your own projects is straightforward:
+### Integrate the Pipeline
+## Integrating the HTR pipeline into your own projects is straightforward:
 
 Import the read_page function from the htr_pipeline module.
 Read your image using OpenCV or any other image processing library.
@@ -73,5 +69,5 @@ Feel free to explore further customization options by referring to the docstring
 
 Discover the power of the HTR pipeline, where handwritten words come to life. Unleash the potential of your handwritten documents with ease and precision!
 
-## Conclusion
+# Conclusion
 The handwritten text recognition (HTR) pipeline offers an effective and efficient solution for detecting and reading words in scanned documents. By combining cutting-edge algorithms and deep learning models, it provides accurate results and flexibility for various use cases. Whether you need to digitize handwritten notes, process historical documents, or extract information from paper-based sources, this pipeline is a valuable tool to streamline your workflow and unlock the potential of handwritten text.
