@@ -2,6 +2,15 @@
 
 Welcome to the handwritten text recognition (HTR) pipeline, where you can detect and read words in scanned pages with ease.
 
+#Features
+Word Detection: The pipeline employs a robust word detection algorithm that can accurately identify individual words in scanned pages, regardless of their orientation, size, or style of handwriting.
+
+Word Reading: Once the words are detected, a sophisticated optical character recognition (OCR) engine is employed to convert the handwritten text into machine-readable format. This allows for seamless access, indexing, and further analysis of the textual content.
+
+Configurable Settings: The pipeline provides flexibility through configurable settings. Users can fine-tune parameters such as the minimum word height, line clustering thresholds, and more, to adapt the system to their specific requirements.
+
+Demo Application: The included demo application showcases the pipeline's capabilities by processing sample images and providing visual representations of the detected words. This allows users to quickly grasp the potential of the system.
+
 ## Overview
 
 This pipeline utilizes advanced algorithms to perform two main operations:
@@ -32,12 +41,14 @@ To get a glimpse of the pipeline's capabilities, run the provided demo:
 
 ### Use the Python Package
 
-You can also integrate the HTR pipeline into your own projects by following these steps:
+##Integrate the Pipeline
+# Integrating the HTR pipeline into your own projects is straightforward:
 
-1. Import the `read_page` function from the `htr_pipeline` module.
-2. Read your image using OpenCV, such as `cv2.imread('data/r06-137.png', cv2.IMREAD_GRAYSCALE)`.
-3. Utilize `read_page` to detect and read the text, providing an optional `DetectorConfig` to customize detection settings.
-4. Access the extracted text by iterating over the returned `read_lines` object, printing or processing the words as needed.
+Import the read_page function from the htr_pipeline module.
+Read your image using OpenCV or any other image processing library.
+Utilize read_page to detect and read the handwritten text, providing optional configuration parameters to fine-tune the detection process.
+Access the extracted text by iterating over the returned data structure, which provides information about the detected words, their positions, and other relevant details.
+Refer to the documentation and function signatures for additional information on available settings and customization options.
 
 ```python
 import cv2
@@ -58,60 +69,5 @@ Feel free to explore further customization options by referring to the docstring
 
 Discover the power of the HTR pipeline, where handwritten words come to life. Unleash the potential of your handwritten documents with ease and precision!
 
-
-# Detect and Read Handwritten Words
-
-This is a **handwritten text recognition (HTR) pipeline** that operates on **scanned pages** and applies the following
-operations:
-
-* Detect words
-* Read words
-
-![example](./doc/example.png)
-
-
-## Installation
-
-* Go to the root level of the repository
-* Execute `pip install .`
-
-## Usage
-
-### Run demo
-
-* Additionally install matplotlib for plotting: `pip install matplotlib`
-* Go to `scripts/`
-* Run `python demo.py`
-* The output should look like the plot shown above
-
-### Use Python package
-
-Import the function `read_page` to detect and read text.
-
-````python
-import cv2
-from htr_pipeline import read_page, DetectorConfig
-
-# read image
-img = cv2.imread('data/r06-137.png', cv2.IMREAD_GRAYSCALE)
-
-# detect and read text
-read_lines = read_page(img, DetectorConfig(height=1000))
-
-# output text
-for read_line in read_lines:
-    print(' '.join(read_word.text for read_word in read_line))
-````
-
-If needed, the detection can be configured by instantiating and passing these data-classes:
-
-* `DetectorConfig`
-* `LineClusteringConfig`
-
-For more details please have a look at the docstrings of `detect` and `sort_multiline`
-in `htr_pipeline/word_detector/__init__.py`. The most important settings are:
-
-* `height` in `DetectorConfig`: the word detector is not scale invariant, the text height should be 25-50px when using
-  the default parameters, which is achieved by resizing the image to the specified height
-* `min_words_per_line` in `LineClusteringConfig`: lines which have fewer words than specified are discarded, the default
-  setting is 2, which means that lines with a single word will not be read by default
+## Conclusion
+The handwritten text recognition (HTR) pipeline offers an effective and efficient solution for detecting and reading words in scanned documents. By combining cutting-edge algorithms and deep learning models, it provides accurate results and flexibility for various use cases. Whether you need to digitize handwritten notes, process historical documents, or extract information from paper-based sources, this pipeline is a valuable tool to streamline your workflow and unlock the potential of handwritten text.
